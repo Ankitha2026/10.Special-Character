@@ -1,0 +1,23 @@
+#Problem 10:
+#Program to check if a string contains any special character
+#Given a string, the task is to check if that string contains any special character (defined special character set). If any special character found, don’t accept that string.
+
+#Examples :
+
+#Input : Python$For$Developers
+#Output : String is not accepted.
+
+#Input : Python For Developers
+#Output : String is accepted
+
+import re
+def run(string):
+    regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+    if (regex.search(string) == None):
+        print("String is accepted")
+
+    else:
+        print("String is not accepted.")
+if __name__ == '__main__':
+    string = input("Enter string :")
+    run(string)
